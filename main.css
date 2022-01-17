@@ -1,0 +1,31 @@
+#products {
+    flex-wrap: wrap;
+  }
+  
+  #products img {
+    height: 300px;
+    object-fit: contain;
+  }
+  
+  .card {
+    width: 30%;
+  }
+  .sort {
+    width: 200px;
+  }
+  .nav-logo {
+    width: 100px;
+    border-radius: 50px;
+  }
+  .image-product {
+    height: 00px;
+  }
+  
+  .card-btn{
+    width: 40px !important;
+    height: 30px;
+  }
+  .material-icons{
+    width: 20px;
+    height: 15;
+  }
