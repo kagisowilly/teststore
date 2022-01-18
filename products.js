@@ -155,6 +155,7 @@ function readProducts(products) {
 }
 
 readProducts(products);
+showCartBadge();
 
 // CREATE
 function createProduct() {
@@ -176,6 +177,7 @@ function createProduct() {
   } catch (err) {
     alert(err);
   }
+  showCartBadge();
 }
 
 // UPDATE
@@ -216,9 +218,10 @@ function deleteProduct(position) {
 //ADD TO CART
 function addtocart(position) {
   let qty= document.querySelector(`#addToCartt${position}`).value;
-
+  
 
   cart.push({ ...products[position],qty });
+  
 
   localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -275,4 +278,9 @@ function sortCategory() {
 
   readProducts(foundProducts);
   console.log(foundProducts);
+}
+
+// Update Cart Badge
+function showCartBadge() {
+  document.querySelector("#badge").innerHTML = cart ? cart.length : "";
 }
